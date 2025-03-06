@@ -8,13 +8,13 @@ from feedback.information import get_exercise_info
 from utils.draw_text_with_background import draw_text_with_background
 
 def main():
-    video_path = r"C:\Users\yakupzengin\Fitness-Trainer\data\dumbel-workout.mp4"
     video_path = r"C:\Users\yakupzengin\Fitness-Trainer\data\squat.mp4"
     video_path = r"C:\Users\yakupzengin\Fitness-Trainer\data\push_up.mp4"
+    video_path = r"C:\Users\yakupzengin\Fitness-Trainer\data\dumbel-workout.mp4"
 
-    exercise_type = "push_up"  # Egzersiz türünü belirleyin ("hammer_curl", "squat", "push_up")
+    exercise_type = "hammer_curl"  # Egzersiz türünü belirleyin ("hammer_curl", "squat", "push_up")
 
-    cap = cv2.VideoCapture(video_path)
+    cap = cv2.VideoCapture(0)
     pose_estimator = PoseEstimator()
 
     if exercise_type == "hammer_curl":
